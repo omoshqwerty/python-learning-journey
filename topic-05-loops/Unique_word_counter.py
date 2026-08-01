@@ -1,0 +1,6 @@
+sentence = input("What language do you like and why? ")
+sentence = sentence.lower()
+sent = sentence.split(" ")
+unique_sent = set(sent)
+print(f"Unique sentence: {unique_sent}")
+print(f"Total unique words: {len(unique_sent)}")
