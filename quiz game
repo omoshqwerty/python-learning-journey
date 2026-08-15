@@ -1,0 +1,57 @@
+# quiz game
+print("=" * 30)
+print("Computer quizes")
+print("=" * 30)
+result = {
+    "correct": 0,
+    "wrong": 0
+}
+
+playing = input("Want to play? use (yes or no) ")
+
+if playing.lower() != "yes":
+    quit()
+
+print("Lets play!")
+
+answer = input("What does CPU stand for? ")
+if answer.lower() == "central processing unit":
+    result["correct"] += 1
+    print("Correct")
+else:
+    result["wrong"] += 1
+    print("Wrong!")
+
+answer = input("What does GPU stand for? ")
+if answer.lower() == "graphics processing unit":
+    result["correct"] += 1
+    print("Correct")
+else:
+    result["wrong"] += 1
+    print("Wrong!")
+
+answer = input("What does RAM stand for? ")
+if answer.lower() == "random access memory":
+    result["correct"] += 1
+    print("Correct")
+else:
+    result["wrong"] += 1
+    print("Wrong!")
+
+answer = input("What does PSU stand for? ")
+if answer.lower() == "power supply unit":
+    result["correct"] += 1
+    print("Correct")
+else:
+    result["wrong"] += 1
+    print("Wrong!")
+
+print("=" * 30)
+
+print(f"Correct: {result['correct']}")
+print(f"Failed: {result['wrong']}")
+
+print("=" * 30)
+total_score = result["correct"] / (result["correct"] + result["wrong"]) * 100
+print(f"You got: {total_score}%")
+print("=" * 30)
